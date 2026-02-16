@@ -13,7 +13,7 @@ def calcula_valor(metragem):
     return valor
 
 st.set_page_config(
-    page_title='previsão de valores'
+    page_title='previsão de valores',
     page_icon='🚀'
 )
 
@@ -31,4 +31,5 @@ if prever_preco:
         valor = calcula_valor(metragem)
         st.write(f'O valor do imóvel de {metragem:.2f} é de R${valor:,.2f}')
         st.success("O valor foi calculado com sucesso", icon = "👍")
+
 
