@@ -9,7 +9,7 @@ with open('modelo_treinado.pkl', 'rb') as file:
 
 def calcula_valor(metragem):
     dados = pd.DataFrame({'m2':[metragem]})
-    valor - modelo.predict(dados)[0][0]
+    valor = modelo.predict(dados)[0][0]
     return valor
 
 st.set_page_config(
@@ -31,5 +31,6 @@ if prever_preco:
         valor = calcula_valor(metragem)
         st.write(f'O valor do imóvel de {metragem:.2f} é de R${valor:,.2f}')
         st.success("O valor foi calculado com sucesso", icon = "👍")
+
 
 
